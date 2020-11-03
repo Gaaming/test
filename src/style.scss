@@ -1,0 +1,177 @@
+@import "azure-devops-ui/Core/_platformCommon.scss";
+@import "./Common.scss";
+
+#root {
+  height: 1500px;
+}
+
+// Label outside of popover
+.label {
+  margin-bottom: 10px;
+
+  .bolt-button & {
+    font-weight: normal;
+  }
+}
+
+.field {
+  outline: none;
+
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+
+  border: none;
+  padding: 12px 16px;
+  background: transparent;
+
+  width: $columnWidth;
+
+  &:hover,
+  &:focus {
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+  }
+}
+
+//////
+
+.hoverlay-label {
+  padding: 14px 16px;
+}
+
+.hoverlay-close {
+  font-size: 12px !important;
+  margin: 12px;
+}
+
+.popover-card {
+  padding: 0px;
+
+  width: $columnWidth;
+}
+
+.popover {
+  padding-bottom: 12px;  
+
+  &-buttons {
+    padding: 12px 16px 0px 1px;
+
+    > * {
+      margin-left: 8px;
+    }
+  }
+}
+
+.bolt-dropdown-filter {
+  background: $transblack-6;
+}
+
+.popover-dropdown-button {
+  text-align: left;
+}
+
+// // Uncomment for alignment debugging
+// .bolt-portal {
+//   opacity: 0.5;
+// }
+
+///
+
+.filter-input-container {
+  padding: 8px 12px;
+  padding-top: 0;
+}
+
+.filter-input {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+    border: 0;
+
+  .bolt-textfield-input {
+    background: transparent;
+  }
+}
+
+///
+
+.textfield-wrapper {
+  padding: 0 16px;
+}
+
+///
+
+.main-content {
+  max-width: 693px;
+  margin-right: 50px;
+
+  padding-top: 12px;
+}
+
+///
+
+.tags {
+  margin: 0 16px;
+}
+
+// 
+
+// List styles
+
+.bolt-list-box-text .bolt-table-cell-content {
+  padding: 0 !important;
+}
+
+.list-item {
+  // Override bolt list style
+  padding: 0px !important;
+}
+
+.list-selection {
+  width: 24px;
+  height: 24px;
+  margin: 4px 8px;
+
+  font-size: 16px !important;
+}
+
+
+/////
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.content-panel {
+  display: flex;
+  flex-direction: column;
+
+  .main-content {
+    margin-right: 0;
+  }
+}
+
+// Mobile
+
+@media screen and (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    
+    .main-content {
+      margin-right: 0;
+    }
+  }
+
+  .popover-card {
+    background: white;
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+  }
+}
